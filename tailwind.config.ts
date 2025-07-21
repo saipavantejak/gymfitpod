@@ -27,7 +27,6 @@ export default {
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
-					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -62,16 +61,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				"gym-green": {
+					DEFAULT: "hsl(var(--gym-green))",
+					light: "hsl(var(--gym-green-light))",
+					dark: "hsl(var(--gym-green-dark))",
+				},
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'monospace']
+				header: ['Montserrat', 'sans-serif'],
+				body: ['Open Sans', 'sans-serif'],
+				sans: ['Open Sans', 'system-ui', 'sans-serif'],
 			},
 			boxShadow: {
-				'premium': 'var(--shadow-premium)',
-				'glow': 'var(--shadow-glow)',
-				'inner': 'var(--shadow-inner)'
+				glow: "var(--shadow-glow)",
+				strong: "var(--shadow-strong)",
+				subtle: "var(--shadow-subtle)",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
