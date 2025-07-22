@@ -5,50 +5,48 @@
 /* GymFitPod Premium Design System */
 
 :root {
-  --background: 0 0% 100%;
-  --foreground: 240 10% 3.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 240 10% 3.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --primary: 142 100% 38%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 240 4.8% 95.9%;
-  --secondary-foreground: 240 5.9% 10%;
-  --muted: 240 4.8% 95.9%;
-  --muted-foreground: 240 3.8% 46.1%;
-  --accent: 240 4.8% 95.9%;
-  --accent-foreground: 240 5.9% 10%;
-  --destructive: 0 84.2% 60.2%;
+  /* Elite Jet Black & Gym Green Theme */
+  --background: 0 0% 4%; /* Jet Black #0A0A0A */
+  --foreground: 0 0% 98%;
+  --card: 0 0% 6%;
+  --card-foreground: 0 0% 98%;
+  --popover: 0 0% 6%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 160 100% 39%; /* Gym Green #00C26E */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 0 0% 8%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 0 0% 12%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 55%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 5.9% 90%;
-  --input: 240 5.9% 90%;
-  --ring: 142 100% 38%;
-  --chart-1: 142 100% 38%;
-  --chart-2: 142 80% 25%;
-  --chart-3: 240 5.9% 10%;
-  --chart-4: 240 4.8% 95.9%;
-  --chart-5: 142 50% 60%;
-  --radius: 0.75rem;
+  --border: 0 0% 15%;
+  --input: 0 0% 8%;
+  --ring: 160 100% 39%;
+  --chart-1: 160 100% 39%;
+  --chart-2: 160 80% 25%;
+  --chart-3: 0 0% 98%;
+  --chart-4: 0 0% 8%;
+  --chart-5: 160 50% 60%;
+  --radius: 12px;
   
-  /* Gym Green Primary Color */
-  --gym-green: 142 100% 38%;
-  --gym-green-light: 142 100% 45%;
-  --gym-green-dark: 142 100% 30%;
+  /* Elite Gym Green System */
+  --gym-green: 160 100% 39%; /* #00C26E */
+  --gym-green-light: 160 100% 45%;
+  --gym-green-dark: 160 100% 32%;
   
-  /* Premium gradients */
+  /* Elite Effects */
   --gradient-primary: linear-gradient(135deg, hsl(var(--gym-green)), hsl(var(--gym-green-light)));
-  --gradient-glow: linear-gradient(135deg, hsl(var(--gym-green) / 0.1), hsl(var(--gym-green) / 0.05));
-  --gradient-dark: linear-gradient(135deg, hsl(240, 10%, 3.9%), hsl(240, 10%, 6%));
+  --gradient-elite: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 4%));
+  --shadow-elite: 0 0 40px hsl(var(--gym-green) / 0.5);
+  --shadow-premium: 0 8px 40px hsl(0 0% 0% / 0.8);
+  --shadow-subtle: 0 2px 16px hsl(0 0% 0% / 0.4);
   
-  /* Premium shadows */
-  --shadow-glow: 0 0 20px hsl(var(--gym-green) / 0.3);
-  --shadow-strong: 0 8px 32px hsl(var(--gym-green) / 0.15);
-  --shadow-subtle: 0 2px 8px hsl(240, 10%, 3.9% / 0.1);
-  
-  /* Transitions */
+  /* Elite Transitions */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-elite: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
@@ -61,38 +59,39 @@
 }
 
 .dark {
-  --background: 240 10% 3.9%;
+  /* Same elite theme for dark mode */
+  --background: 0 0% 4%;
   --foreground: 0 0% 98%;
-  --card: 240 10% 3.9%;
+  --card: 0 0% 6%;
   --card-foreground: 0 0% 98%;
-  --popover: 240 10% 3.9%;
+  --popover: 0 0% 6%;
   --popover-foreground: 0 0% 98%;
-  --primary: 142 100% 38%;
+  --primary: 160 100% 39%;
   --primary-foreground: 0 0% 98%;
-  --secondary: 240 3.7% 15.9%;
+  --secondary: 0 0% 8%;
   --secondary-foreground: 0 0% 98%;
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  --accent: 240 3.7% 15.9%;
+  --muted: 0 0% 12%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 0 0% 12%;
   --accent-foreground: 0 0% 98%;
-  --destructive: 0 62.8% 30.6%;
+  --destructive: 0 84% 55%;
   --destructive-foreground: 0 0% 98%;
-  --border: 240 3.7% 15.9%;
-  --input: 240 3.7% 15.9%;
-  --ring: 142 100% 38%;
-  --chart-1: 142 100% 38%;
-  --chart-2: 142 80% 25%;
+  --border: 0 0% 15%;
+  --input: 0 0% 8%;
+  --ring: 160 100% 39%;
+  --chart-1: 160 100% 39%;
+  --chart-2: 160 80% 25%;
   --chart-3: 0 0% 98%;
-  --chart-4: 240 3.7% 15.9%;
-  --chart-5: 142 50% 60%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --chart-4: 0 0% 8%;
+  --chart-5: 160 50% 60%;
+  --sidebar-background: 0 0% 4%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-primary: 160 100% 39%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 0 0% 8%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-border: 0 0% 15%;
+  --sidebar-ring: 160 100% 39%;
 }
 
 @layer base {
@@ -108,30 +107,53 @@
 }
 
 @layer components {
-  .gym-card {
-    @apply bg-card border border-border rounded-xl shadow-subtle backdrop-blur-sm transition-all duration-300;
+  /* Elite Card System */
+  .elite-card {
+    @apply bg-card border border-border rounded-xl shadow-subtle backdrop-blur-sm;
+    box-shadow: var(--shadow-subtle);
+    transition: var(--transition-elite);
   }
   
-  .gym-card-available {
-    @apply bg-gradient-to-br from-background to-gym-green/5 border-gym-green/20 shadow-glow;
+  .elite-card-glow {
+    @apply bg-gradient-to-br from-card to-gym-green/10 border-gym-green/30;
+    box-shadow: var(--shadow-elite);
   }
   
-  .unlock-button {
-    @apply bg-gradient-to-r from-gym-green to-gym-green-light text-primary-foreground rounded-2xl shadow-strong hover:shadow-glow transition-all duration-300 transform hover:scale-105;
+  .elite-card-disabled {
+    @apply bg-muted/20 border-muted/30 opacity-40 cursor-not-allowed;
   }
   
-  .unlock-button-glow {
-    animation: glow-pulse 2s ease-in-out infinite alternate;
+  /* Elite Button System */
+  .elite-button {
+    @apply bg-gym-green text-primary-foreground rounded-2xl font-header font-bold;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-elite);
   }
   
-  .glass-surface {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+  .elite-button:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-elite);
   }
   
-  .gradient-text {
-    @apply bg-gradient-to-r from-gym-green to-gym-green-light bg-clip-text text-transparent;
+  .elite-button-pulse {
+    animation: elite-pulse 2s ease-in-out infinite;
   }
   
+  /* Elite Input System */
+  .elite-input {
+    @apply bg-input border border-border rounded-lg px-4 py-3 text-foreground font-body;
+    transition: var(--transition-smooth);
+  }
+  
+  .elite-input:focus {
+    @apply outline-none ring-2 ring-gym-green border-gym-green/50;
+  }
+  
+  .elite-input-error {
+    @apply border-destructive ring-destructive;
+  }
+  
+  /* Elite Animations */
   .fade-in-up {
     animation: fade-in-up 0.6s ease-out;
   }
@@ -142,12 +164,18 @@
 }
 
 @layer utilities {
-  @keyframes glow-pulse {
+  @keyframes elite-pulse {
     0% {
-      box-shadow: 0 0 20px hsl(var(--gym-green) / 0.4);
+      box-shadow: 0 0 30px hsl(var(--gym-green) / 0.5);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 50px hsl(var(--gym-green) / 0.8);
+      transform: scale(1.02);
     }
     100% {
-      box-shadow: 0 0 40px hsl(var(--gym-green) / 0.8);
+      box-shadow: 0 0 30px hsl(var(--gym-green) / 0.5);
+      transform: scale(1);
     }
   }
   

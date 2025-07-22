@@ -1,113 +1,57 @@
-import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Dumbbell, Shield, Zap } from 'lucide-react';
 import heroPodImage from '@/assets/hero-pod.jpg';
-
-const motivationalQuotes = [
-  "Elevate Yourself",
-  "Your private sanctuary awaits",
-  "Where focus meets fitness",
-  "Premium. Private. Powerful.",
-];
 
 interface WelcomeScreenProps {
   onGetStarted: () => void;
 }
 
 const WelcomeScreen = ({ onGetStarted }: WelcomeScreenProps) => {
-  const [currentQuote, setCurrentQuote] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentQuote((prev) => (prev + 1) % motivationalQuotes.length);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const features = [
-    {
-      icon: Shield,
-      title: "100% Private",
-      description: "Your pod, your rules"
-    },
-    {
-      icon: Zap,
-      title: "Smart Tech",
-      description: "AI-powered workouts"
-    },
-    {
-      icon: Dumbbell,
-      title: "Premium Equipment",
-      description: "Professional grade"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
+      {/* Full Screen Pod Image */}
+      <div className="absolute inset-0">
         <img 
           src={heroPodImage} 
           alt="Private GymPod" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
+        {/* Elite Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+      </div>
+      
+      {/* Content Layer */}
+      <div className="relative z-10 flex flex-col h-screen">
+        {/* Header */}
+        <div className="pt-16 px-8 text-center">
+          <h1 className="text-4xl font-header font-bold text-foreground mb-2 tracking-tight">
+            GymFitPod
+          </h1>
+        </div>
         
-        {/* Logo/Brand */}
-        <div className="absolute top-8 left-6 right-6">
-          <div className="text-center">
-            <h1 className="text-2xl font-header font-bold text-foreground mb-1">
-              GymFitPod
-            </h1>
-            <p className="text-sm text-muted-foreground font-medium">
-              India's First PRIVATE GYMPOD
+        {/* Main Content - Centered */}
+        <div className="flex-1 flex flex-col justify-center items-center px-8 text-center">
+          <div className="space-y-6 fade-in-up">
+            {/* Primary Headline */}
+            <h2 className="text-3xl font-header font-bold text-foreground leading-tight">
+              India's First<br />
+              <span className="text-gym-green">PRIVATE GYMPOD</span>
+            </h2>
+            
+            {/* Subheadline */}
+            <p className="text-xl font-body text-muted-foreground font-medium tracking-wide">
+              Privacy. Progress. Power.
             </p>
           </div>
         </div>
         
-        {/* Motivational Quote */}
-        <div className="absolute bottom-8 left-6 right-6">
-          <div className="text-center">
-            <h2 className="text-3xl font-header font-bold text-foreground mb-2 fade-in-up">
-              {motivationalQuotes[currentQuote]}
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="px-6 py-8 space-y-6">
-        <div className="grid grid-cols-3 gap-4">
-          {features.map((feature, index) => (
-            <Card key={index} className="gym-card p-4 text-center">
-              <feature.icon className="w-6 h-6 text-gym-green mx-auto mb-2" />
-              <h3 className="text-sm font-header font-semibold text-foreground mb-1">
-                {feature.title}
-              </h3>
-              <p className="text-xs text-muted-foreground font-body">
-                {feature.description}
-              </p>
-            </Card>
-          ))}
-        </div>
-
-        {/* CTA Button */}
-        <div className="pt-4">
+        {/* CTA Section */}
+        <div className="pb-16 px-8">
           <Button 
             onClick={onGetStarted}
-            className="w-full h-14 text-lg font-header font-semibold unlock-button"
+            className="w-full h-16 text-xl elite-button elite-button-pulse"
           >
             Private
           </Button>
-        </div>
-
-        {/* Footer Text */}
-        <div className="text-center pt-2">
-          <p className="text-xs text-muted-foreground font-body">
-            Premium fitness pods across India
-          </p>
         </div>
       </div>
     </div>

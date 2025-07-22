@@ -11,12 +11,10 @@ interface BookingConfirmationPopupProps {
 }
 
 const motivationalQuotes = [
+  "Discipline = Freedom. Pod reserved.",
   "You just chose discipline. See you in the pod.",
-  "Commitment made. Excellence awaits.",
-  "Your private sanctuary is reserved.",
-  "Decision taken. Transformation begins.",
-  "The pod is yours. Make it count.",
-  "You chose yourself. That's powerful.",
+  "Excellence chosen. Sanctuary ready.",
+  "Your commitment to power begins now.",
 ];
 
 const BookingConfirmationPopup = ({ 
@@ -39,7 +37,7 @@ const BookingConfirmationPopup = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
       <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" onClick={onClose} />
       
-      <Card className="relative w-full max-w-sm gym-card p-6 text-center fade-in-up">
+      <div className="relative w-full max-w-sm elite-card-glow p-8 text-center fade-in-up rounded-2xl">
         <div className="mb-6">
           <CheckCircle className="w-16 h-16 text-gym-green mx-auto mb-4" />
           <h2 className="text-xl font-header font-bold text-foreground mb-2">
@@ -69,7 +67,7 @@ const BookingConfirmationPopup = ({
             Ready
           </Button>
         </div>
-      </Card>
+      </div>
     </div>
   );
 };
